@@ -13,14 +13,16 @@ function App() {
   return (
     <div>
       <header className="site-head">
+      <div className="head-back">
       <h1 className="nav-heading">Top Scouts</h1>
+      </div>
       <ul className="nav-bar">
         <li className="nav-item">Login</li>
         <li className="nav-item">Rankings</li>
         <li className="nav-item">Search</li>
       </ul>
       </header>
-      <div> Yo</div>
+      <div> </div>
     </div>
   );
 }

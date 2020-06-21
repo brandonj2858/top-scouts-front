@@ -29,6 +29,7 @@
 }
 
 .nav-heading {
+  height: 51px;
   width: 160px;
   font-family: Impact;
   background: royalblue;
@@ -40,6 +41,13 @@
   display: inline-block;
   height: 50px;
   padding-top: 5px;
+  transform: skew(-25deg, 0);
+}
+
+.head-back {
+  background-color: royalblue;
+  display: inline-block;
+  width: 60px
 }
 
 .site-head {
@@ -49,7 +57,7 @@
 .nav-bar {
   display: inline-block;
   margin-top: 0px;
-
+  margin-left: 125px;
   width: 75%;
   align-items: stretch; /* Default */
   justify-content: space-between;
@@ -58,11 +66,16 @@
 }
 
 .nav-item {
+  cursor: pointer;
   padding-left: 50px;
   color: white;
   display: inline-block;
   list-style-type: none;
 
+}
+
+.nav-item:hover {
+  font-size: 110%;
 }
 
 @keyframes App-logo-spin {
