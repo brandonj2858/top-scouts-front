@@ -11,8 +11,16 @@ function App() {
   })
 
   return (
-    <div className="App">
-      Top Scouts
+    <div>
+      <header className="site-head">
+      <h1 className="nav-heading">Top Scouts</h1>
+      <ul className="nav-bar">
+        <li className="nav-item">Login</li>
+        <li className="nav-item">Rankings</li>
+        <li className="nav-item">Search</li>
+      </ul>
+      </header>
+      <div> Yo</div>
     </div>
   );
 }
