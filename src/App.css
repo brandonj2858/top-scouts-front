@@ -51,7 +51,7 @@
 }
 
 .site-head {
-  background: black;
+  background: #2b2c2d;
 }
 
 .nav-bar {
@@ -71,11 +71,12 @@
   color: white;
   display: inline-block;
   list-style-type: none;
-
+  color: whitesmoke;
 }
 
 .nav-item:hover {
-  font-size: 110%;
+  color: white;
+  font-weight: 500;
 }
 
 @keyframes App-logo-spin {

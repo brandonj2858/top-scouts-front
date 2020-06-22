@@ -21,6 +21,18 @@ function App() {
         <li className="nav-item">Rankings</li>
         <li className="nav-item">Search</li>
       </ul>
+
+      <div className="main-container">
+
+      <div className="offense-container">
+        <header className="offense-header">Offense</header>
+        <ul className="offense-list"> </ul>
+
+
+      </div>
+
+      </div>
+
       </header>
       <div> </div>
     </div>
