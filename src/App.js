@@ -12,28 +12,42 @@ function App() {
 
   return (
     <div>
+
+      <div className="bar-div">
       <header className="site-head">
       <div className="head-back">
       <h1 className="nav-heading">Top Scouts</h1>
       </div>
+      </header>
       <ul className="nav-bar">
         <li className="nav-item">Login</li>
         <li className="nav-item">Rankings</li>
         <li className="nav-item">Search</li>
       </ul>
+      </div>
 
       <div className="main-container">
+
+      <div className="left-column">
 
       <div className="offense-container">
         <header className="offense-header">Offense</header>
         <ul className="offense-list"> </ul>
-
-
       </div>
 
       </div>
 
-      </header>
+      <div className="middle-column">
+      news
+      </div>
+
+      <div className="right-column">
+      stuff
+      </div>
+
+      </div>
+
+
       <div> </div>
     </div>
   );

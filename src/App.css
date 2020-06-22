@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+
 }
 
 .App-logo {
@@ -42,7 +43,14 @@
   height: 50px;
   padding-top: 5px;
   transform: skew(-25deg, 0);
+
 }
+
+.bar-div {
+  background: #2b2c2d;
+}
+
+
 
 .head-back {
   background-color: royalblue;
@@ -52,6 +60,7 @@
 
 .site-head {
   background: #2b2c2d;
+  display: inline-block;
 }
 
 .nav-bar {
@@ -73,6 +82,44 @@
   list-style-type: none;
   color: whitesmoke;
 }
+
+.main-container {
+  background: #edeef0;
+  padding-top: 75px;
+}
+
+.left-column {
+  width: 25%;
+  float: left;
+  background: #edeef0;
+  text-align: center;
+}
+
+
+.middle-column {
+  width: 50%;
+  float: left;
+  text-align: center;
+  background: #edeef0;
+}
+
+.right-column {
+  width: 25%;
+  float: left;
+  background: #edeef0;
+}
+
+.offense-container {
+  box-sizing: border-box;
+  width: 50%;
+  background-color: white;
+  height: 350px;
+  border: 0;
+  float: left;
+
+}
+
+
 
 .nav-item:hover {
   color: white;
