@@ -92,7 +92,6 @@
   width: 25%;
   float: left;
   background: #edeef0;
-  text-align: center;
 }
 
 
@@ -111,12 +110,23 @@
 
 .offense-container {
   box-sizing: border-box;
-  width: 50%;
+  width: 75%;
   background-color: white;
   height: 350px;
   border: 0;
   float: left;
+  margin-left: 12.5%;
+  border-radius: 10px;
 
+}
+
+.offense-header {
+  background: white;
+  border-radius: 10px;
+  padding-left: 20px;
+  font-family: baskerville;
+  font-weight: 800;
+  font-size: x-large;
 }
 
 
