@@ -111,25 +111,43 @@
 .offense-container {
   box-sizing: border-box;
   width: 75%;
-  background-color: white;
+  background-color: #f9f9f9;
   height: 350px;
   border: 0;
   float: left;
   margin-left: 12.5%;
   border-radius: 10px;
-
+  height: 250px;
 }
 
 .offense-header {
-  background: white;
+  background: #f9f9f9;
   border-radius: 10px;
   padding-left: 20px;
   font-family: baskerville;
   font-weight: 800;
   font-size: x-large;
+  text-decoration: underline;
 }
 
+.pos-item {
+  padding-top: 5px;
+  list-style: none;
 
+}
+
+.pos-item:hover {
+  font-weight: 500;
+  background-color: white;
+  cursor: pointer;
+}
+
+.offense-list {
+  padding-left: 14px;
+  font-size: large;
+  margin-top: 15px;
+  font-size: 14px;
+}
 
 .nav-item:hover {
   color: white;
