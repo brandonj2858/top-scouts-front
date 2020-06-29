@@ -48,11 +48,63 @@ const Rankings = () => {
           </div>
 
           <div className="middle-column">
+          <table>
+            <tr>
+              <th>Rank</th>
+              <th>Full Name</th>
+              <th>School</th>
+              <th>Height</th>
+              <th>Weight</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Maria Anders</td>
+              <td>Germany</td>
+              <td> </td>
+              <td> </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Francisco Chang</td>
+              <td>Mexico</td>
+              <td> </td>
+              <td> </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Roland Mendel</td>
+              <td>Austria</td>
+              <td> </td>
+              <td> </td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Helen Bennett</td>
+              <td>UK</td>
+              <td> </td>
+              <td> </td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Yoshi </td>
+              <td>Canada</td>
+              <td> </td>
+              <td> </td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Giovanni Rovelli</td>
+              <td>Italy</td>
+              <td> </td>
+              <td> </td>
+            </tr>
+            </table>
+
 
           </div>
 
           <div className="right-column">
-          
+
           </div>
 
           </div>
