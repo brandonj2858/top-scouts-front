@@ -6,11 +6,14 @@ const Rankings = () => {
 
   const [players, setPlayers] = useState([])
   const [suggestions, setSuggestions] = useState([])
+  const [position, setPosition] = useState("RB")
 
   useEffect(() => {
     fetch('http://localhost:3000/players')
     .then(res => res.json())
     .then(resObj => setPlayers(resObj))
+
+
 
   })
 
@@ -37,6 +40,21 @@ const Rankings = () => {
       return player.first_name + " " + player.last_name == evt.target.innerText
     })
     console.log(selectedPlayer)
+  }
+
+  const sortPlayers = (playe) => {
+    return playe.sort((a, b) => {
+      return a.rank - b.rank
+    })
+
+  }
+
+  const filterPosition = (players) => {
+    return players.filter((player) => {
+      return player.position === position
+    })
+
+
   }
 
 
@@ -93,48 +111,25 @@ const Rankings = () => {
               <th>Height</th>
               <th>Weight</th>
             </tr>
+
+
+            {players ? filterPosition(sortPlayers(players)).slice(0,5).map((player) => {
+
+            return (
             <tr>
-              <td>1</td>
-              <td>Maria Anders</td>
-              <td>Germany</td>
-              <td> </td>
-              <td> </td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Francisco Chang</td>
-              <td>Mexico</td>
-              <td> </td>
-              <td> </td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Roland Mendel</td>
-              <td>Austria</td>
-              <td> </td>
-              <td> </td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>Helen Bennett</td>
-              <td>UK</td>
-              <td> </td>
-              <td> </td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td>Yoshi </td>
-              <td>Canada</td>
-              <td> </td>
-              <td> </td>
-            </tr>
-            <tr>
-              <td>6</td>
-              <td>Giovanni Rovelli</td>
-              <td>Italy</td>
-              <td> </td>
-              <td> </td>
-            </tr>
+              <td>{player.rank}</td>
+              <td>{player.first_name + " " + player.last_name}</td>
+              <td>{player.school}</td>
+              <td>{player.height}</td>
+              <td>{player.weight}</td>
+            </tr>)
+
+            }): null}
+
+
+
+
+
             </table>
 
             <div style={{paddingTop: "50px"}} >
