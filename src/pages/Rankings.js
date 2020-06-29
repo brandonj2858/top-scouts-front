@@ -1,9 +1,46 @@
-import React from 'react';
-
+import React, {useState, useEffect} from 'react';
 import {BrowserRouter as Router,Route, Link, Switch} from 'react-router-dom';
 
 
 const Rankings = () => {
+
+  const [players, setPlayers] = useState([])
+  const [suggestions, setSuggestions] = useState([])
+
+  useEffect(() => {
+    fetch('http://localhost:3000/players')
+    .then(res => res.json())
+    .then(resObj => setPlayers(resObj))
+
+  })
+
+
+  const handleChange = (evt) => {
+    const input = evt.target.value
+    const playerNames = players.map((player) => {
+      return player.first_name + " " + player.last_name
+    })
+    if (input.length < 3) {
+      setSuggestions([])
+    }
+    else {
+      const regex = new RegExp(input, 'gi');
+      const suggestions = playerNames.filter((name) => (regex.test(name)))
+      console.log(suggestions)
+      setSuggestions(suggestions)
+    }
+  }
+
+  const handleClick = (evt) => {
+    console.log(evt.target.innerText)
+    const selectedPlayer = players.filter((player) => {
+      return player.first_name + " " + player.last_name == evt.target.innerText
+    })
+    console.log(selectedPlayer)
+  }
+
+
+
     return (
         <div>
 
@@ -100,6 +137,12 @@ const Rankings = () => {
             </tr>
             </table>
 
+            <div style={{paddingTop: "50px"}} >
+            First Name: <input onChange={handleChange} type="text"/>
+            Last Name: <input type="text"/>
+            </div>
+
+            <div>{suggestions.map((name) => <li onClick={handleClick}>{name}</li>)} </div>
 
           </div>
 
