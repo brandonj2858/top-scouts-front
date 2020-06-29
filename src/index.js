@@ -2,12 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import { BrowserRouter as Router } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
+import { BrowserRouter, Route, Switch} from "react-router-dom";
+import Rankings from './pages/Rankings'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+  <BrowserRouter>
+  <Switch>
+  <Route exact path="/" component={App}/>
+  <Route exact path="/rankings" component={Rankings}/>
+  </Switch >
+
+  </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

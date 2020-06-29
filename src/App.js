@@ -1,7 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {BrowserRouter as Router,Route, Link} from 'react-router-dom';
+import Rankings from './pages/Rankings';
+import {BrowserRouter as Router,Route, Link, Switch} from 'react-router-dom';
+
 
 
 function App() {
@@ -13,8 +15,9 @@ function App() {
   })
 
   return (
+
     <div>
-    <Router>
+
       <div className="bar-div">
       <header className="site-head">
       <div className="head-back">
@@ -35,8 +38,11 @@ function App() {
       <div className="offense-container">
         <header className="offense-header">Offense</header>
         <ul className="offense-list">
+
+
         <Link to="/rankings"><li className="pos-item">Quarterback </li></Link>
-        <Route path="/rankings"> </Route>
+
+
         <li className="pos-item">Runningback </li>
         <li className="pos-item">FullBack </li>
         <li className="pos-item">Offensive Tackle</li>
@@ -64,9 +70,11 @@ function App() {
 
 
       <div> </div>
-      </Router>
+
+
 
     </div>
+    
   );
 }
 
