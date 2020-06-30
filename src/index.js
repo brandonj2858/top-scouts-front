@@ -5,6 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter, Route, Switch} from "react-router-dom";
 import Rankings from './pages/Rankings'
+import Search from './pages/Search'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -12,6 +13,8 @@ ReactDOM.render(
   <Switch>
   <Route exact path="/" component={App}/>
   <Route exact path="/rankings" component={Rankings}/>
+  <Route exact path="/search" component={Search}/>
+
   </Switch >
 
   </BrowserRouter>
