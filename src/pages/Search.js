@@ -4,6 +4,7 @@ const Search = (props) => {
 
   const [suggestions, setSuggestions] = useState([])
   const [players, setPlayers] = useState([])
+  const [selection, setSelection] = useState([])
 
   useEffect(() => {
     fetch('http://localhost:3000/players')
@@ -12,12 +13,16 @@ const Search = (props) => {
 
   })
 
+
+
   const handleClick = (evt) => {
-    console.log(evt.target.innerText)
+
     const selectedPlayer = players.filter((player) => {
       return player.first_name + " " + player.last_name == evt.target.innerText
     })
-    console.log(selectedPlayer)
+    console.log(selectedPlayer[0].jersey)
+    setSelection(selectedPlayer[0])
+    console.log(selection)
   }
 
   const handleChange = (evt) => {
@@ -42,6 +47,10 @@ const Search = (props) => {
     <div>
       <input onChange={handleChange} type="text"/>
       {suggestions.map((name) => <li onClick={handleClick}>{name}</li>)}
+
+      <div>
+      {selection == [] ? null : selection.id }
+      </div>
     </div>
 
   )
