@@ -110,6 +110,7 @@
 
 .offense-container {
   box-sizing: border-box;
+  border-radius: 10px;
   width: 75%;
   background-color: #f9f9f9;
   height: 350px;
@@ -122,12 +123,12 @@
 
 .offense-header {
   background: #f9f9f9;
-  border-radius: 10px;
-  padding-left: 20px;
+  margin-left: 16px;
+  padding-left: 2px;
   font-family: baskerville;
   font-weight: 800;
   font-size: x-large;
-  text-decoration: underline;
+
 }
 
 table {
@@ -163,6 +164,11 @@ tr:nth-child(even) {
   font-size: large;
   margin-top: 15px;
   font-size: 14px;
+}
+
+
+.admin-left {
+  width: 25%
 }
 
 .nav-item:hover {
