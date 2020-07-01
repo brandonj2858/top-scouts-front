@@ -128,7 +128,13 @@
   font-family: baskerville;
   font-weight: 800;
   font-size: x-large;
+  border-bottom: 1px dotted;
+  width: 85px;
 
+}
+
+.admin-list {
+  list-style: none;
 }
 
 table {

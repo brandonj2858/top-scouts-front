@@ -15,9 +15,9 @@ const Admin = (props) => {
       <div className="offense-container">
         <header className="offense-header">Duties</header>
         <ul className="offense-list">
-        <li> </li>
-        <li> </li>
-        <li> </li>
+        <li className="admin-list">Update Player </li>
+        <li className="admin-list">Edit Account</li>
+        <li className="admin-list">Add News</li>
 
 
 
