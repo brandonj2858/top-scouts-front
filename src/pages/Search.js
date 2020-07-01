@@ -46,10 +46,10 @@ const Search = (props) => {
   return(
     <div>
       <input onChange={handleChange} type="text"/>
-      {suggestions.map((name) => <li onClick={handleClick}>{name}</li>)}
+      {suggestions.map((name) => <li onClick={props.handleSet}>{name}</li>)}
 
       <div>
-      {selection == [] ? null : selection.id }
+
       </div>
     </div>
 

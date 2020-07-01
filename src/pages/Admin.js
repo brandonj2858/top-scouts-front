@@ -1,9 +1,14 @@
 import React, {useEffect, useState} from 'react'
-
+import PlayerForm from '../components/PlayerForm'
 
 const Admin = (props) => {
 
+  const [updateForm, setUpdateForm] = useState(false)
 
+  const showForm = (evt) => {
+    setUpdateForm(true)
+
+  }
 
   return (
     <div>
@@ -15,18 +20,17 @@ const Admin = (props) => {
       <div className="offense-container">
         <header className="offense-header">Duties</header>
         <ul className="offense-list">
-        <li className="admin-list">Update Player </li>
+        <li className="admin-list" onClick={showForm}>Update Player </li>
         <li className="admin-list">Edit Account</li>
         <li className="admin-list">Add News</li>
-
-
-
-
         </ul>
       </div>
 
       </div>
 
+      <div className="admin-right">
+      {updateForm ? <PlayerForm /> : null}
+      </div>
 
     </div>
   )

@@ -135,7 +135,14 @@
 
 .admin-list {
   list-style: none;
+  padding-bottom: 5px;
 }
+
+.admin-list:hover {
+  font-weight: 800;
+  cursor: pointer;
+}
+
 
 table {
   font-family: arial, sans-serif;
@@ -174,7 +181,14 @@ tr:nth-child(even) {
 
 
 .admin-left {
-  width: 25%
+  width: 25%;
+  float: left;
+
+}
+
+.admin-right {
+  width: 75%;
+  float: left;
 }
 
 .nav-item:hover {
