@@ -5,6 +5,9 @@ const Search = (props) => {
   const [suggestions, setSuggestions] = useState([])
   const [players, setPlayers] = useState([])
   const [selection, setSelection] = useState([])
+  const [chosenPlayer, setChosenPlayer] = useState("")
+  const [userInput, setUserInput] = useState("")
+
 
   useEffect(() => {
     fetch('http://localhost:3000/players')
@@ -20,23 +23,29 @@ const Search = (props) => {
     const selectedPlayer = players.filter((player) => {
       return player.first_name + " " + player.last_name == evt.target.innerText
     })
-    console.log(selectedPlayer[0].jersey)
+    console.log(evt.target.innerText)
+    setUserInput(evt.target.innerText)
+
+
     setSelection(selectedPlayer[0])
-    console.log(selection)
+
   }
 
   const handleChange = (evt) => {
-    const input = evt.target.value;
+    setUserInput(evt.target.value );
+    console.log(userInput);
     const playerNames = players.map((player) => {
       return player.first_name + " " + player.last_name
     })
-    if (input.length < 3) {
+    if (userInput.length < 3) {
       setSuggestions([])
     }
     else {
-      const regex = new RegExp(input, 'gi')
+      const regex = new RegExp(userInput, 'gi')
       const suggestions = playerNames.filter((name) => (regex.test(name)))
+
       setSuggestions(suggestions)
+
     }
 
   }
@@ -48,17 +57,17 @@ const Search = (props) => {
 
       <div className="search-field">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-        <input placeholder="Search By Name" className="search-bar" onChange={handleChange} type="text"/>
+        <input placeholder="Search By Name" className="search-bar" onChange={handleChange} value={userInput} type="text"/>
         <button type="submit"><i class="fa fa-search"></i> </button>
       </div>
 
       <div className="suggestions-area">
-        {suggestions.map((name) => <li className="suggestion-list" onClick={props.handleSet}>{name}</li>)}
+        {suggestions.map((name) => <li className="suggestion-list" onClick={props.handleSet, handleClick}>{name}</li>)}
       </div>
 
 
 
-      
+
 
 
     </div>

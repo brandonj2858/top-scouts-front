@@ -32,7 +32,6 @@ const PlayerForm = () => {
     <Search handleSet={handleSet}/>
     <div className="results-container">
     {selection.id}
-
     </div>
 
     </div>

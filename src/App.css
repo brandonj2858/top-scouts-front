@@ -211,8 +211,9 @@ tr:nth-child(even) {
 .suggestion-list {
   border-bottom: 1px groove;
   font-size: larger;
-  background: #e5eaf3
-
+  background: #e5eaf3;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .suggestion-list:hover {
