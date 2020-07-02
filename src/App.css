@@ -179,6 +179,57 @@ tr:nth-child(even) {
   font-size: 14px;
 }
 
+.search-field {
+  display: inline-flex;
+}
+
+.results-container {
+  height: 300px;
+  background: white;
+  margin-top: 25px;
+  border-radius: 10px;
+}
+
+.suggestions-area {
+  text-align: center;
+  list-style: none;
+  width: 209px;
+  background-color: white;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  margin-left: 225px;
+  top: 100%;
+  left: 0;
+  right: 0;
+  position: absolute;
+  top: 105px;
+  left: 320px;
+
+}
+
+.suggestion-list {
+  border-bottom: 1px groove;
+  font-size: larger;
+  background: #e5eaf3
+
+}
+
+.suggestion-list:hover {
+  background: whitesmoke;
+  cursor: pointer;
+  font-weight: 600;
+
+}
+
+.search-bar {
+  font-size: 17px;
+border: 1px solid grey;
+float: left;
+width: 80%;
+background: #f9fafd;
+}
+
 
 .admin-left {
   width: 25%;

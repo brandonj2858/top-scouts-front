@@ -44,13 +44,23 @@ const Search = (props) => {
 
 
   return(
-    <div>
-      <input onChange={handleChange} type="text"/>
-      {suggestions.map((name) => <li onClick={props.handleSet}>{name}</li>)}
+    <div className="search-container">
 
-      <div>
-
+      <div className="search-field">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <input placeholder="Search By Name" className="search-bar" onChange={handleChange} type="text"/>
+        <button type="submit"><i class="fa fa-search"></i> </button>
       </div>
+
+      <div className="suggestions-area">
+        {suggestions.map((name) => <li className="suggestion-list" onClick={props.handleSet}>{name}</li>)}
+      </div>
+
+
+
+      
+
+
     </div>
 
   )

@@ -25,8 +25,15 @@ const PlayerForm = () => {
 
   return (
     <div style={{width: "70%",textAlign: "center"}}>
+
+
+
+
     <Search handleSet={handleSet}/>
+    <div className="results-container">
     {selection.id}
+
+    </div>
 
     </div>
   )
