@@ -216,6 +216,10 @@ tr:nth-child(even) {
   padding-bottom: 10px;
 }
 
+.school-logo {
+  max-width: 100px;
+}
+
 .suggestion-list:hover {
   background: whitesmoke;
   cursor: pointer;

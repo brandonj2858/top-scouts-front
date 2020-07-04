@@ -4,24 +4,37 @@ import Search from '../pages/Search'
 
 const PlayerForm = () => {
 
-  const [players, setPlayers] = useState([])
+  const [teams, setTeams] = useState([])
   const [selection, setSelection] = useState([])
+  const [selectedTeam, setSelectedTeam] = useState([])
+  const [showProf, setShowProf] = useState(false)
 
   useEffect(() => {
-    fetch('http://localhost:3000/players')
+    fetch('http://localhost:3000/teams')
     .then(res => res.json())
-    .then(resObj => setPlayers(resObj))
+    .then(resObj => setTeams(resObj))
+
 
   })
 
-  const handleSet = (evt) => {
-    const selectedPlayer = players.filter((player) => {
-      return player.first_name + " " + player.last_name == evt.target.innerText
-    })
-    console.log(selectedPlayer[0].jersey)
-    setSelection(selectedPlayer[0])
-    console.log(selection)
+
+  const handleSet = (evt, sel) => {
+
+    setSelection(sel)
+    
+
+
   }
+
+  const filterTeam = () => {
+    console.log(selection)
+    const teamFound = teams.filter((team) => {
+      return team.school === selection.school
+    })
+    setSelectedTeam(teamFound[0].logos[0])
+  }
+
+
 
   return (
     <div style={{width: "70%",textAlign: "center"}}>
@@ -31,7 +44,17 @@ const PlayerForm = () => {
 
     <Search handleSet={handleSet}/>
     <div className="results-container">
-    {selection.id}
+
+      <div>
+        {selection.first_name} {selection.last_name}
+        {selection.id}
+
+      </div>
+      <div >
+        {showProf == true ? filterTeam() : null}
+        {selectedTeam === undefined ? null : <img className="school-logo" src={selectedTeam}/>}
+      </div>
+
     </div>
 
     </div>

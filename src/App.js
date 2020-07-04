@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
-import logo from './logo.svg';
+
 import './App.css';
-import Rankings from './pages/Rankings';
-import {BrowserRouter as Router,Route, Link, Switch} from 'react-router-dom';
+
+import {BrowserRouter as  Link} from 'react-router-dom';
 
 
 
@@ -74,7 +74,7 @@ function App() {
 
 
     </div>
-    
+
   );
 }
 
