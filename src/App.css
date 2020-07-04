@@ -220,6 +220,18 @@ tr:nth-child(even) {
   max-width: 100px;
 }
 
+.prof-div {
+  float: left;
+  padding-left: 5%;
+  padding-top: 2%;
+  text-align: start;
+}
+
+.prof-li {
+  list-style: none;
+  margin-top: 10px;
+}
+
 .suggestion-list:hover {
   background: whitesmoke;
   cursor: pointer;
