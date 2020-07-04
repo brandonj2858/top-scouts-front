@@ -14,6 +14,7 @@ const Search = (props) => {
     fetch('http://localhost:3000/players')
     .then(res => res.json())
     .then(resObj => setPlayers(resObj))
+    .then(console.log("done"))
 
   })
 
@@ -30,6 +31,7 @@ const Search = (props) => {
     //setShowSuggestions(false)
 
     setSelection(selectedPlayer[0])
+    setSuggestions([])
 
   }
 
@@ -64,12 +66,12 @@ const Search = (props) => {
       <div className="search-field">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
         <input placeholder="Search By Name" className="search-bar" onChange={handleChange} value={userInput} type="text"/>
-        <button type="submit"><i className="fa fa-search"></i> </button>
+        <button type="submit" onClick={props.filterTeam}><i className="fa fa-search"></i> </button>
       </div>
 
       <div className="suggestions-area">
-        {showSuggestions ? suggestions.map((name) => <li className="suggestion-list" onClick={handleClick}>{name}</li>) : null}
-        
+        {suggestions.map((name, index) => <li className="suggestion-list" key={index} onClick={handleClick}>{name}</li>) }
+
       </div>
 
 

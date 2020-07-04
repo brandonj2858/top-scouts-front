@@ -21,7 +21,7 @@ const PlayerForm = () => {
   const handleSet = (evt, sel) => {
 
     setSelection(sel)
-    
+
 
 
   }
@@ -31,6 +31,7 @@ const PlayerForm = () => {
     const teamFound = teams.filter((team) => {
       return team.school === selection.school
     })
+    console.log(selectedTeam)
     setSelectedTeam(teamFound[0].logos[0])
   }
 
@@ -42,7 +43,7 @@ const PlayerForm = () => {
 
 
 
-    <Search handleSet={handleSet}/>
+    <Search filterTeam={filterTeam} handleSet={handleSet}/>
     <div className="results-container">
 
       <div>
@@ -51,8 +52,9 @@ const PlayerForm = () => {
 
       </div>
       <div >
-        {showProf == true ? filterTeam() : null}
+        
         {selectedTeam === undefined ? null : <img className="school-logo" src={selectedTeam}/>}
+
       </div>
 
     </div>
