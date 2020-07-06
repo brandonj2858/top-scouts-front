@@ -9,6 +9,7 @@ const PlayerForm = () => {
   const [selectedTeam, setSelectedTeam] = useState([])
   const [showProf, setShowProf] = useState(false)
   const [teamColors, setTeamColors] = useState("")
+  const [formValues, setFormValues] = useState({})
 
   useEffect(() => {
     fetch('http://localhost:3000/teams')
@@ -50,6 +51,21 @@ const PlayerForm = () => {
     setSelectedTeam(teamFound[0].logos[0])
   }
 
+  const handleUpdate = (evt) => {
+    evt.preventDefault()
+    console.log(formValues);
+
+
+  }
+
+  const handleChange = (evt) => {
+    evt.preventDefault()
+    let formValuesCopy = {...formValues}
+    formValuesCopy[evt.target.name] = evt.target.value
+    setFormValues(formValuesCopy)
+
+  }
+
 
 
   return (
@@ -78,11 +94,11 @@ const PlayerForm = () => {
 
             </div>
 
-            <form className="update-form">
+            <form onChange={handleChange} onSubmit={handleUpdate} className="update-form">
             Rank: <select type="number" name="rank"  default={selection.rank}>
-              {intRange().map((num) => {return <option value={selection.rank} selected>{num}</option>})}
+              {intRange().map((num) => {return <option default={selection.rank} value={formValues["rank"]}>{num}</option>})}
             </select>
-            <textarea className="scout-input" type="textarea" default={selection.scouting_report} name="scouting_report"/>
+            <textarea className="scout-input" type="textarea" value={formValues["scouting_report"]} default={selection.scouting_report} name="scouting_report"/>
             <input type="submit" value="Submit"/>
 
             </form>
