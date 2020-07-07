@@ -53,7 +53,17 @@ const PlayerForm = () => {
 
   const handleUpdate = (evt) => {
     evt.preventDefault()
-    console.log(formValues);
+
+    fetch(`http://localhost:3000/players/${selection.id}`, {
+      method: "PATCH",
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      body: JSON.stringify(formValues)
+    })
+    .then(res => res.json())
+    .then(resObj => console.log(resObj))
 
 
   }
@@ -99,6 +109,7 @@ const PlayerForm = () => {
               {intRange().map((num) => {return <option default={selection.rank} value={formValues["rank"]}>{num}</option>})}
             </select>
             <textarea className="scout-input" type="textarea" value={formValues["scouting_report"]} default={selection.scouting_report} name="scouting_report"/>
+
             <input type="submit" value="Submit"/>
 
             </form>
