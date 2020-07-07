@@ -14,7 +14,7 @@ const Search = (props) => {
     fetch('http://localhost:3000/players')
     .then(res => res.json())
     .then(resObj => setPlayers(resObj))
-    .then(console.log("done"))
+
 
   })
 
