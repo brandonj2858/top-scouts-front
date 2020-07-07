@@ -22,7 +22,13 @@ const PlayerForm = () => {
 
   const handleSet = (evt, sel) => {
 
+    setFormValues({
+      rank: sel.rank,
+      scouting_report: sel.scouting_report
+    })
+
     setSelection(sel)
+
 
 
 
@@ -70,6 +76,7 @@ const PlayerForm = () => {
 
   const handleChange = (evt) => {
     evt.preventDefault()
+    console.log(evt.target.value);
     let formValuesCopy = {...formValues}
     formValuesCopy[evt.target.name] = evt.target.value
     setFormValues(formValuesCopy)
@@ -105,10 +112,10 @@ const PlayerForm = () => {
             </div>
 
             <form onChange={handleChange} onSubmit={handleUpdate} className="update-form">
-            Rank: <select type="number" name="rank"  default={selection.rank}>
-              {intRange().map((num) => {return <option default={selection.rank} value={formValues["rank"]}>{num}</option>})}
+            Rank: <select type="number" value={formValues["rank"]}  name="rank"  >
+              {intRange().map((num) => {return <option   >{num}</option>})}
             </select>
-            <textarea className="scout-input" type="textarea" value={formValues["scouting_report"]} default={selection.scouting_report} name="scouting_report"/>
+            <textarea className="scout-input" type="textarea" value={formValues["scouting_report"]}  name="scouting_report"/>
 
             <input type="submit" value="Submit"/>
 
