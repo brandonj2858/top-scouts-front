@@ -59,6 +59,7 @@ const PlayerForm = () => {
 
   const handleUpdate = (evt) => {
     evt.preventDefault()
+    console.log('going')
 
     fetch(`http://localhost:3000/players/${selection.id}`, {
       method: "PATCH",
