@@ -7,7 +7,7 @@ const PlayerForm = () => {
   const [teams, setTeams] = useState([])
   const [selection, setSelection] = useState([])
   const [selectedTeam, setSelectedTeam] = useState([])
-  const [showProf, setShowProf] = useState(false)
+  const [showProf, setShowProf] = useState(true)
   const [teamColors, setTeamColors] = useState("")
   const [formValues, setFormValues] = useState({})
 
@@ -15,6 +15,7 @@ const PlayerForm = () => {
     fetch('http://localhost:3000/teams')
     .then(res => res.json())
     .then(resObj => setTeams(resObj))
+    
 
 
   })

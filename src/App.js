@@ -8,11 +8,14 @@ import {BrowserRouter as  Link} from 'react-router-dom';
 
 function App() {
   const [teams, setTeams] = useState([])
-  useEffect(() => {
-    fetch('http://localhost:3000/teams')
-    .then(res => res.json())
-    .then(resObj => setTeams(resObj))
-  })
+  const [news, setNews] = useState([])
+
+  useEffect(() =>  {
+    fetch('http://newsapi.org/v2/everything?q=college-football&from=2020-07-08&sortBy=publishedAt&apiKey=661358eea45c4220bca8dd46168ebcea')
+      .then(res => res.json())
+      .then(resObj => setNews(resObj.articles))
+      }
+    )
 
   return (
 
@@ -59,6 +62,16 @@ function App() {
       </div>
 
       <div className="middle-column">
+      {news.map((article) => {
+
+        return(
+        <div>
+        {article.title}
+        <img className="articleImg" src={article.urlToImage}/>
+
+         </div>)
+      })}
+
       news
       </div>
 
