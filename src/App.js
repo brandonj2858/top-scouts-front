@@ -11,10 +11,10 @@ function App() {
   const [news, setNews] = useState([])
 
   useEffect(() =>  {
-    fetch('http://newsapi.org/v2/everything?q=college-football&from=2020-07-08&sortBy=publishedAt&apiKey=661358eea45c4220bca8dd46168ebcea')
+    fetch('http://newsapi.org/v2/everything?q=ncaa-football&from=2020-07-08&sortBy=publishedAt&apiKey=661358eea45c4220bca8dd46168ebcea')
       .then(res => res.json())
       .then(resObj => setNews(resObj.articles))
-      }
+    }, [news]
     )
 
   return (
@@ -62,15 +62,15 @@ function App() {
       </div>
 
       <div className="middle-column">
-      {news.map((article) => {
+      {news ? news.map((article) => {
 
         return(
-        <div>
-        {article.title}
+        <div className="article-div">
         <img className="articleImg" src={article.urlToImage}/>
+        <h2 className="article-head" >{article.title}</h2>
 
          </div>)
-      })}
+      }) : null}
 
       news
       </div>
