@@ -14,6 +14,7 @@ function App() {
     fetch('http://newsapi.org/v2/everything?q=ncaa-football&from=2020-07-08&sortBy=publishedAt&apiKey=661358eea45c4220bca8dd46168ebcea')
       .then(res => res.json())
       .then(resObj => setNews(resObj.articles))
+
     }, [news]
     )
 
@@ -68,6 +69,7 @@ function App() {
         <div className="article-div">
         <img className="articleImg" src={article.urlToImage}/>
         <h2 className="article-head" >{article.title}</h2>
+        <a>{article.description} </a>
 
          </div>)
       }) : null}

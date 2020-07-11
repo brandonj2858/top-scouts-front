@@ -199,8 +199,7 @@ tr:nth-child(even) {
 .articleImg {
   max-width: 450px;
   max-width: 100%;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+
 }
 
 .article-head {
@@ -210,10 +209,21 @@ tr:nth-child(even) {
   padding-left: 15px;
 }
 
+.article-head::after {
+  content: ""; /* This is necessary for the pseudo element to work. */
+    display: block; /* This will put the pseudo element on its own line. */
+    margin: 0 auto; /* This will center the border. */
+    width: 90%; /* Change this to whatever width you want. */
+    padding-top: 5px; /* This creates some space between the element and the border. */
+    border-bottom: 1px dotted grey;
+}
+
 .article-div {
   background: white;
   border-radius: 10px;
-  margin-top: 15px;
+  box-shadow: 0 0 10px #606061;
+  padding-bottom: 15px;
+  margin-top: 25px;
 }
 
 .suggestions-area {
