@@ -257,6 +257,12 @@ tr:nth-child(even) {
   max-width: 100px;
 }
 
+.login-area {
+  text-align: center;
+  display: block;
+
+}
+
 .update-form {
   display: table-caption;
   padding-top: 5px
