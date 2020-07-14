@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { BrowserRouter, Route, Switch} from "react-router-dom";
+import { BrowserRouter, Router, Route, Switch} from "react-router-dom";
 import Rankings from './pages/Rankings'
 import Search from './pages/Search'
 import Admin from './pages/Admin'
@@ -13,9 +13,10 @@ ReactDOM.render(
   <React.StrictMode>
   <BrowserRouter>
   <Switch>
-  <Route exact path="/" component={App}/>
+  <App/>
+  <Route exact path={"/"} component={App}/>
   <Route exact path="/rankings" component={Rankings}/>
-  <Route exact path="/search" component={Search}/>
+  <Route exact path={`/search`} component={Search}/>
   <Route exact path="/admin" component={Admin}/>
   <Route exact path="/login" component={Login}/>
 

@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 
 import './App.css';
 
-import {BrowserRouter as  Link} from 'react-router-dom';
+import {BrowserRouter as Route, Switch, Link} from 'react-router-dom';
 
 
 
@@ -14,7 +14,7 @@ function App() {
     fetch('http://newsapi.org/v2/everything?q=ncaa-football&from=2020-07-08&sortBy=publishedAt&apiKey=661358eea45c4220bca8dd46168ebcea')
       .then(res => res.json())
       .then(resObj => setNews(resObj.articles))
-      
+
 
     }, [news]
     )
@@ -32,7 +32,7 @@ function App() {
       <ul className="nav-bar">
         <li className="nav-item">Login</li>
         <li className="nav-item">Rankings</li>
-        <li className="nav-item">Search</li>
+        <Link to="/search"><li className="nav-item">Search</li></Link>
       </ul>
       </div>
 
@@ -87,7 +87,13 @@ function App() {
 
       <div> </div>
 
-
+      <Switch>
+        <Route exact path={"/"} component={App}/>
+        <Route exact path="/rankings" component={Rankings}/>
+        <Route exact path={`/search`} component={Search}/>
+        <Route exact path="/admin" component={Admin}/>
+        <Route exact path="/login" component={Login}/>
+      </Switch>
 
     </div>
 
