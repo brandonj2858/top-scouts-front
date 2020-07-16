@@ -1,26 +1,21 @@
 import React, {useState, useEffect} from 'react';
 
 import './App.css';
+import Rankings from './pages/Rankings'
+import Search from './pages/Search'
+import Admin from './pages/Admin'
+import Login from './pages/Login'
+import Home from './pages/Home'
 
-import {BrowserRouter as Route, Switch, Link} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 
 
 
 function App() {
-  const [teams, setTeams] = useState([])
-  const [news, setNews] = useState([])
 
-  useEffect(() =>  {
-    fetch('http://newsapi.org/v2/everything?q=ncaa-football&from=2020-07-08&sortBy=publishedAt&apiKey=661358eea45c4220bca8dd46168ebcea')
-      .then(res => res.json())
-      .then(resObj => setNews(resObj.articles))
-
-
-    }, [news]
-    )
 
   return (
-
+    <Router>
     <div>
 
       <div className="bar-div">
@@ -36,67 +31,18 @@ function App() {
       </ul>
       </div>
 
-      <div className="main-container">
 
-      <div className="left-column">
-
-      <div className="offense-container">
-        <header className="offense-header">Offense</header>
-        <ul className="offense-list">
-
-
-        <Link to="/rankings"><li className="pos-item">Quarterback </li></Link>
-
-
-        <li className="pos-item">Runningback </li>
-        <li className="pos-item">FullBack </li>
-        <li className="pos-item">Offensive Tackle</li>
-        <li className="pos-item">Offensive Gaurd </li>
-        <li className="pos-item">Tight End</li>
-        <li className="pos-item">Wide Reciever </li>
-
-
-
-
-        </ul>
-      </div>
-
-      </div>
-
-      <div className="middle-column">
-      {news ? news.map((article) => {
-
-        return(
-        <div className="article-div">
-        <img className="articleImg" src={article.urlToImage}/>
-        <h2 className="article-head" >{article.title}</h2>
-        <a>{article.description} </a>
-
-         </div>)
-      }) : null}
-
-      news
-      </div>
-
-      <div className="right-column">
-      stuff
-      </div>
-
-      </div>
-
-
-      <div> </div>
 
       <Switch>
-        <Route exact path={"/"} component={App}/>
-        <Route exact path="/rankings" component={Rankings}/>
-        <Route exact path={`/search`} component={Search}/>
-        <Route exact path="/admin" component={Admin}/>
-        <Route exact path="/login" component={Login}/>
+        <Route exact path={'/'} component={Home}/>
+        <Route  path="/rankings" component={Rankings}/>
+        <Route  path={`/search`} component={Search}/>
+        <Route  path="/admin" component={Admin}/>
+        <Route  path="/login" component={Login}/>
       </Switch>
 
     </div>
-
+    </Router>
   );
 }
 
