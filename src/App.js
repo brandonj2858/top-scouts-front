@@ -25,7 +25,7 @@ function App() {
       </div>
       </header>
       <ul className="nav-bar">
-        <li className="nav-item">Login</li>
+        <Link to="/login"><li className="nav-item">Login</li></Link>
         <li className="nav-item">Rankings</li>
         <Link to="/search"><li className="nav-item">Search</li></Link>
       </ul>

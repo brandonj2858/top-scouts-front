@@ -7,9 +7,10 @@ const Login = () => {
 
 
   const handleLogin = (evt) => {
-    fetch('http://localhost:3000/login', {
+    fetch('http://localhost:3000/users/login', {
       method: "POST",
       headers: {
+        "Content-Type" : "application/json",
         "Accept" : "application/json"
       },
       body: JSON.stringify(loginValues)
@@ -32,18 +33,7 @@ const Login = () => {
 
   return (
     <div >
-    <div className="bar-div">
-    <header className="site-head">
-    <Redirect to="/"><div className="head-back">
-    <Link to="/"><h1 className="nav-heading">Top Scouts</h1></Link>
-    </div></Redirect>
-    </header>
-    <ul className="nav-bar">
-      <li className="nav-item">Login</li>
-      <li className="nav-item">Rankings</li>
-      <li className="nav-item">Search</li>
-    </ul>
-    </div>
+
 
     <div className="login-area">
 
