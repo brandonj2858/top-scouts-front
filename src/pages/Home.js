@@ -52,7 +52,7 @@ const Home = () => {
             <div className="article-div">
             <img className="articleImg" src={article.urlToImage}/>
             <h2 className="article-head" >{article.title}</h2>
-            <a>{article.description} </a>
+            <a className="article-desc">{article.description} </a>
 
              </div>)
           }) : null}
@@ -61,7 +61,25 @@ const Home = () => {
           </div>
 
           <div className="right-column">
-          stuff
+          <div className="offense-container">
+            <header className="ptw-header">Players To Watch</header>
+            <ul className="offense-list">
+
+            <Link to="/rankings"><li className="pos-item">Quarterback </li></Link>
+
+            <li className="pos-item">Runningback </li>
+            <li className="pos-item">FullBack </li>
+            <li className="pos-item">Offensive Tackle</li>
+            <li className="pos-item">Offensive Gaurd </li>
+            <li className="pos-item">Tight End</li>
+            <li className="pos-item">Wide Reciever </li>
+
+
+            </ul>
+          </div>
+
+
+
           </div>
 
           </div>

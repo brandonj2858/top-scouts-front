@@ -119,6 +119,7 @@
   margin-left: 12.5%;
   border-radius: 10px;
   height: 250px;
+  box-shadow: 16px 0px 14px #d6d6d8;
 }
 
 .offense-header {
@@ -131,6 +132,17 @@
   border-bottom: 1px dotted;
   width: 85px;
 
+}
+
+.ptw-header {
+  background: #f9f9f9;
+  margin-left: 16px;
+  padding-left: 2px;
+  font-family: baskerville;
+  font-weight: 800;
+  font-size: x-large;
+  border-bottom: 1px dotted;
+  width: 85%;
 }
 
 .admin-list {
@@ -202,15 +214,19 @@ tr:nth-child(even) {
 
 }
 
+.article-desc {
+
+}
+
 .article-head {
   width: 90%;
   margin: 0;
-  text-align: left;
+  padding-bottom: 10px;
   padding-left: 15px;
 }
 
 .article-head::after {
-  content: ""; /* This is necessary for the pseudo element to work. */
+    content: ""; /* This is necessary for the pseudo element to work. */
     display: block; /* This will put the pseudo element on its own line. */
     margin: 0 auto; /* This will center the border. */
     width: 90%; /* Change this to whatever width you want. */
