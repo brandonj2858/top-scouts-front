@@ -22,6 +22,7 @@ function App() {
       <header className="site-head">
       <div className="head-back">
       <h1 className="nav-heading">Top Scouts</h1>
+      
       </div>
       </header>
       <ul className="nav-bar">

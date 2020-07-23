@@ -33,7 +33,7 @@
   height: 51px;
   width: 160px;
   font-family: Impact;
-  background: royalblue;
+  background: #3262f5;;
   color: aliceblue;
   margin: auto;
   padding-left: 15px;
@@ -42,25 +42,35 @@
   display: inline-block;
   height: 50px;
   padding-top: 5px;
-  transform: skew(-25deg, 0);
 
+
+}
+
+.nav-heading::after {
+  background: #b40000;
+  width: 300px;
+  transform: skew(-25deg, 0);
+  content: "";
 }
 
 .bar-div {
   background: #2b2c2d;
+  height: 55px;
 }
 
 
 
 .head-back {
-  background-color: royalblue;
+  transform: skew(-25deg, 0);
+  background-color: #255cff9e;
   display: inline-block;
-  width: 60px
+  width: 193px;
 }
 
 .site-head {
-  background: #2b2c2d;
   display: inline-block;
+  background: #3262f5;;
+  width: 100px;
 }
 
 .nav-bar {
@@ -100,6 +110,7 @@
   float: left;
   text-align: center;
   background: #edeef0;
+  margin-top: -25px;
 }
 
 .right-column {
@@ -118,8 +129,9 @@
   float: left;
   margin-left: 12.5%;
   border-radius: 10px;
-  height: 250px;
+  height: 245px;
   box-shadow: 16px 0px 14px #d6d6d8;
+  margin-bottom: 50px;
 }
 
 .offense-header {
@@ -130,17 +142,22 @@
   font-weight: 800;
   font-size: x-large;
   border-bottom: 1px dotted;
-  width: 85px;
-
+  width: 45%;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  margin-bottom: -4px;
 }
 
 .ptw-header {
   background: #f9f9f9;
+  padding-bottom: 5px;
   margin-left: 16px;
   padding-left: 2px;
   font-family: baskerville;
   font-weight: 800;
   font-size: x-large;
+  margin-top: 10px;
+  margin-bottom: -2px;
   border-bottom: 1px dotted;
   width: 85%;
 }
@@ -216,6 +233,11 @@ tr:nth-child(even) {
 
 .article-desc {
 
+}
+
+.nav-ext {
+  width: 25px;
+  content: ""
 }
 
 .article-head {
