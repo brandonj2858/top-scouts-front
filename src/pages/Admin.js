@@ -12,20 +12,9 @@ const Admin = (props) => {
 
   return (
     <div>
-    <div className="bar-div">
-    <header className="site-head">
-    <div className="head-back">
-    <h1 className="nav-heading">Top Scouts</h1>
-    </div>
-    </header>
-    <ul className="nav-bar">
-      <li className="nav-item">Login</li>
-      <li className="nav-item">Rankings</li>
-      <li className="nav-item">Search</li>
-    </ul>
-    </div>
+
       <div style={{textAlign: "center"}}>
-        <marquee className="admin-heading"><h1 style={{marginTop: '10px'}}>Admin Page</h1></marquee>
+        <marquee className="admin-heading"><h1 style={{marginTop: '10px', color: "black"}}>Search Players</h1></marquee>
       </div>
 
       <div className="admin-left">

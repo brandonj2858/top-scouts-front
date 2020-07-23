@@ -342,7 +342,7 @@ tr:nth-child(even) {
   padding-top: 2%;
   text-align: start;
   width: 100%;
-  height: auto;
+  height: -webkit-fill-available;
   background: white;
   border-radius: 10px;
 }
@@ -390,6 +390,24 @@ background: #f9fafd;
 .nav-item:hover {
   color: white;
   font-weight: 500;
+}
+
+.login-area {
+  height: 500px;
+}
+
+.form-area {
+  margin-top: 50px;
+  height: 250px;
+  border: 1px solid;
+  border-radius: 10px;
+  width: 400px;
+  margin-left: 35%;
+  background: linear-gradient(90deg, rgb(114, 149, 202) 0%, rgb(123, 167, 239) 51%, rgb(82, 122, 183) 90%);
+}
+
+.username-input {
+  margin-bottom: 5px;
 }
 
 @keyframes App-logo-spin {

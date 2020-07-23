@@ -37,11 +37,16 @@ const Login = () => {
 
     <div className="login-area">
 
-    <form onChange={handleChange} onSubmit={handleLogin}>
-      Username:<input type="text" name="username"/>
-      Password:<input type="password" name="password"/>
-      <input type="submit" value="Submit"/>
-    </form>
+      <div className="form-area">
+        <h2>LOGIN </h2>
+        <form onChange={handleChange} onSubmit={handleLogin}>
+          <input placeholder="Username" className="username-input" type="text" name="username"/>
+          <br/>
+          <input  placeholder="Password" className="pass-input" type="password" name="password"/>
+          <br/>
+          <input style={{marginTop: "5px"}} type="submit" value="Submit"/>
+        </form>
+      </div>
 
     </div>
 

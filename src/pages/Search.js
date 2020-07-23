@@ -16,7 +16,7 @@ const Search = (props) => {
     .then(resObj => setPlayers(resObj))
 
 
-  })
+  }, [])
 
 
 

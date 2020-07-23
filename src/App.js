@@ -21,14 +21,14 @@ function App() {
       <div className="bar-div">
       <header className="site-head">
       <div className="head-back">
-      <h1 className="nav-heading">Top Scouts</h1>
-      
+      <Link to="/"><h1 className="nav-heading">Top Scouts</h1></Link>
+
       </div>
       </header>
       <ul className="nav-bar">
         <Link to="/login"><li className="nav-item">Login</li></Link>
         <li className="nav-item">Rankings</li>
-        <Link to="/search"><li className="nav-item">Search</li></Link>
+        <Link to="/admin"><li className="nav-item">Search</li></Link>
       </ul>
       </div>
 
