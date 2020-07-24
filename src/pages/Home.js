@@ -10,7 +10,7 @@ const Home = () => {
     fetch('http://newsapi.org/v2/everything?q=ncaa-football&from=2020-07-08&sortBy=publishedAt&apiKey=661358eea45c4220bca8dd46168ebcea')
       .then(res => res.json())
       .then(resObj => setNews(resObj.articles))
-      .then(console.log('hey'))
+      
 
     }, []
     )
