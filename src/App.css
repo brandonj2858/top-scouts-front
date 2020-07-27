@@ -126,6 +126,7 @@
 
 .table-values {
   font-size: 14px;
+  font-family: verdana;
 }
 
 .middle-column-rank {
@@ -432,6 +433,28 @@ background: #f9fafd;
 
 .username-input {
   margin-bottom: 5px;
+  border: 1px;
+  border-radius: 5px;
+  height: 25px;
+  width: 50%;
+  background: #f1fbfb;
+}
+
+.login-submit {
+  font-family: sans-serif;
+  margin-top: 5px;
+  height: 25px;
+  border-radius: 5px;
+  width: 75px;
+  letter-spacing: 2px;
+}
+
+.pass-input {
+  border: 1px;
+  border-radius: 5px;
+  height: 25px;
+  width: 50%;
+  background: #f1fbfb;
 }
 
 @keyframes App-logo-spin {

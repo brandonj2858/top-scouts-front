@@ -44,7 +44,7 @@ const Login = () => {
           <br/>
           <input  placeholder="Password" className="pass-input" type="password" name="password"/>
           <br/>
-          <input style={{marginTop: "5px"}} type="submit" value="Submit"/>
+          <input style={{marginTop: "5px"}} type="submit" className="login-submit" value="Submit"/>
         </form>
       </div>
 

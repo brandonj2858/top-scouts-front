@@ -104,7 +104,7 @@ const Rankings = () => {
             {players ? filterPosition(sortPlayers(players)).slice(0,5).map((player) => {
 
             return (
-            <tr>
+            <tr className="table-values">
               <td>{player.rank}</td>
               <td>{player.first_name + " " + player.last_name}</td>
               <td>{player.school}</td>
