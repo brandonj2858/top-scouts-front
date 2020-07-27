@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import PlayerForm from '../components/PlayerForm'
 
-const Admin = (props) => {
+const Find = (props) => {
 
   const [updateForm, setUpdateForm] = useState(false)
 
@@ -38,4 +38,4 @@ const Admin = (props) => {
 }
 
 
-export default Admin
+export default Find

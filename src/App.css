@@ -104,6 +104,12 @@
   background: #edeef0;
 }
 
+.rank-table {
+  overflow: hidden;
+  border-radius: 14px;
+  transform: rotate(0deg);
+}
+
 
 .middle-column {
   width: 50%;
@@ -111,6 +117,24 @@
   text-align: center;
   background: #edeef0;
   margin-top: -25px;
+}
+
+.table-title {
+  color: white;
+  background: #3262f5;
+}
+
+.table-values {
+  font-size: 14px;
+}
+
+.middle-column-rank {
+  width: 70%;
+  float: left;
+  text-align: center;
+  background: #edeef0;
+  margin-top: -25px;
+  padding-top: 25px;
 }
 
 .right-column {

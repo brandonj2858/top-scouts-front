@@ -62,19 +62,6 @@ const Rankings = () => {
     return (
         <div>
 
-          <div className="bar-div">
-          <header className="site-head">
-          <div className="head-back">
-          <h1 className="nav-heading">Top Scouts</h1>
-          </div>
-          </header>
-          <ul className="nav-bar">
-            <li className="nav-item">Login</li>
-            <li className="nav-item">Rankings</li>
-            <li className="nav-item">Search</li>
-          </ul>
-          </div>
-
           <div className="main-container">
 
           <div className="left-column">
@@ -84,7 +71,7 @@ const Rankings = () => {
             <ul className="offense-list">
 
 
-            <Link to="/rankings"><li className="pos-item">Quarterback </li></Link>
+            <li className="pos-item">Quarterback </li>
 
 
             <li className="pos-item">Runningback </li>
@@ -102,14 +89,15 @@ const Rankings = () => {
 
           </div>
 
-          <div className="middle-column">
-          <table>
+          <div className="middle-column-rank">
+          <table className="rank-table">
             <tr>
-              <th>Rank</th>
-              <th>Full Name</th>
-              <th>School</th>
-              <th>Height</th>
-              <th>Weight</th>
+              <th className="table-title">Rank</th>
+              <th className="table-title">Full Name</th>
+              <th className="table-title">School</th>
+              <th className="table-title">Height</th>
+              <th className="table-title">Weight</th>
+              <th className="table-title">Hometown</th>
             </tr>
 
 
@@ -122,6 +110,7 @@ const Rankings = () => {
               <td>{player.school}</td>
               <td>{player.height}</td>
               <td>{player.weight}</td>
+              <td>{player.home_city}, {player.home_state}</td>
             </tr>)
 
             }): null}
@@ -132,12 +121,7 @@ const Rankings = () => {
 
             </table>
 
-            <div style={{paddingTop: "50px"}} >
-            First Name: <input onChange={handleChange} type="text"/>
-            Last Name: <input type="text"/>
-            </div>
 
-            <div>{suggestions.map((name) => <li onClick={handleClick}>{name}</li>)} </div>
 
           </div>
 

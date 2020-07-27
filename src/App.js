@@ -27,8 +27,8 @@ function App() {
       </header>
       <ul className="nav-bar">
         <Link to="/login"><li className="nav-item">Login</li></Link>
-        <li className="nav-item">Rankings</li>
-        <Link to="/admin"><li className="nav-item">Search</li></Link>
+        <Link to="/rankings"><li className="nav-item">Rankings</li></Link>
+        <Link to="/find"><li className="nav-item">Search</li></Link>
       </ul>
       </div>
 
@@ -38,7 +38,7 @@ function App() {
         <Route exact path={'/'} component={Home}/>
         <Route  path="/rankings" component={Rankings}/>
         <Route  path={`/search`} component={Search}/>
-        <Route  path="/admin" component={Admin}/>
+        <Route  path="/find" component={Admin}/>
         <Route  path="/login" component={Login}/>
       </Switch>
 
