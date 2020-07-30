@@ -440,6 +440,10 @@ background: #f9fafd;
   background: #f1fbfb;
 }
 
+.article-div:hover {
+  cursor: pointer;
+}
+
 .login-submit {
   font-family: sans-serif;
   margin-top: 5px;
