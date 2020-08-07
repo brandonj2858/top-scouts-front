@@ -32,6 +32,7 @@ const Search = (props) => {
 
     setSelection(selectedPlayer[0])
     setSuggestions([])
+    
 
   }
 

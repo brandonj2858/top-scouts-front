@@ -15,7 +15,7 @@ const PlayerForm = () => {
     fetch('http://localhost:3000/teams')
     .then(res => res.json())
     .then(resObj => setTeams(resObj))
-    
+
 
 
   })
@@ -49,13 +49,14 @@ const PlayerForm = () => {
   }
 
   const filterTeam = () => {
-    console.log(selection)
+
     const teamFound = teams.filter((team) => {
       return team.school === selection.school
     })
     console.log(selectedTeam)
     setTeamColors(teamFound[0].color)
     setSelectedTeam(teamFound[0].logos[0])
+
   }
 
   const handleUpdate = (evt) => {
@@ -99,7 +100,7 @@ const PlayerForm = () => {
       <div className="prof-div" >
 
         {selectedTeam.length === 0 ? null :
-          <div>
+          <div className="player-div">
             <img className="school-logo" src={selectedTeam}/>
             <div style={{display: "flex", flexFlow: "wrap"}}>
               <li className="prof-li"><span className="attributes">Name</span> <strong className="attributes-value" style={{color: teamColors}}>{selection.first_name} {selection.last_name} </strong></li>
