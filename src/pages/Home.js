@@ -7,7 +7,11 @@ const Home = () => {
   const [news, setNews] = useState([])
 
   useEffect(() =>  {
-    fetch('http://newsapi.org/v2/everything?q=ncaa-football&from=2020-07-08&sortBy=publishedAt&apiKey=661358eea45c4220bca8dd46168ebcea')
+    let unfixedDate = new Date()
+    let fixedDate = `${unfixedDate.getMonth() + 1}/${unfixedDate.getDate()}/${unfixedDate.getFullYear()}`
+    console.log(fixedDate);
+
+    fetch(`http://newsapi.org/v2/everything?q=ncaa-football&from=2020-09-0&sortBy=publishedAt&apiKey=661358eea45c4220bca8dd46168ebcea`)
       .then(res => res.json())
       .then(resObj => setNews(resObj.articles))
 

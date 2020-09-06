@@ -8,6 +8,12 @@ import Rankings from './pages/Rankings'
 import Search from './pages/Search'
 import Admin from './pages/Admin'
 import Login from './pages/Login'
+import thunk from 'redux-thunk'
+import { Provider } from 'react-redux'
+import { createStore, applyMiddleware} from 'redux'
+import rootReducer from './redux/rootReducer.js'
+
+const store = createStore(rootReducer, applyMiddleware(thunk));
 
 ReactDOM.render(
   <React.StrictMode>

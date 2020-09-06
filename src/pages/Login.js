@@ -1,14 +1,17 @@
 import React, {useEffect, useState} from 'react';
 import {BrowserRouter as  Redirect ,Link} from 'react-router-dom';
 import App from '../App'
+import { useDispatch } from 'react-redux';
+import userActions from '../redux/actions';
 
 const Login = () => {
   const [loginValues, setLoginValues] = useState({})
 
+  const dispatch = useDispatch();
 
   const handleLogin = (evt) => {
-    
-    fetch(`http://localhost:3000/users/login`, {
+
+    /*fetch(`http://localhost:3000/users/login`, {
       method: "POST",
       headers: {
         "Content-Type" : "application/json",
@@ -20,7 +23,9 @@ const Login = () => {
       localStorage.setItem('usertoken', res)
       console.log(res.user)
       return res.data
-    })
+    })*/
+    dispatch(userActions.loginUserToDB(loginValues));
+    props.history.push('/');
 
 
 
