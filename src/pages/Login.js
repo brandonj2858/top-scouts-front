@@ -11,7 +11,7 @@ const Login = () => {
 
   const handleLogin = (evt) => {
 
-    /*fetch(`http://localhost:3000/users/login`, {
+    fetch(`http://localhost:3000/users/login`, {
       method: "POST",
       headers: {
         "Content-Type" : "application/json",
@@ -23,9 +23,9 @@ const Login = () => {
       localStorage.setItem('usertoken', res)
       console.log(res.user)
       return res.data
-    })*/
+    })
     dispatch(userActions.loginUserToDB(loginValues));
-    props.history.push('/');
+    /*props.history.push('/');*/
 
 
 
