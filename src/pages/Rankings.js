@@ -57,6 +57,11 @@ const Rankings = () => {
 
   }
 
+  const handlePosChange = (evt) => {
+
+    setPosition(evt.target.getAttribute('name'))
+  }
+
 
 
     return (
@@ -69,21 +74,26 @@ const Rankings = () => {
           <div className="offense-container">
             <header className="offense-header">Offense</header>
             <ul className="offense-list">
+              <li onClick={handlePosChange} name="QB" className="pos-item">Quarterback </li>
+              <li onClick={handlePosChange} name="RB" className="pos-item">Runningback </li>
+              <li onClick={handlePosChange} name="FB" className="pos-item">FullBack </li>
+              <li onClick={handlePosChange} name="OT" className="pos-item">Offensive Tackle</li>
+              <li onClick={handlePosChange} name="G" className="pos-item">Offensive Gaurd </li>
+              <li onClick={handlePosChange} name="TE" className="pos-item">Tight End</li>
+              <li onClick={handlePosChange} name="WR" className="pos-item">Wide Reciever </li>
+            </ul>
+          </div>
 
-
-            <li className="pos-item">Quarterback </li>
-
-
-            <li className="pos-item">Runningback </li>
-            <li className="pos-item">FullBack </li>
-            <li className="pos-item">Offensive Tackle</li>
-            <li className="pos-item">Offensive Gaurd </li>
-            <li className="pos-item">Tight End</li>
-            <li className="pos-item">Wide Reciever </li>
-
-
-
-
+          <div className="offense-container">
+            <header className="offense-header">Defense</header>
+            <ul className="offense-list">
+            <li className="pos-item">Defensive Tackle</li>
+            <li className="pos-item">Defensive End </li>
+            <li className="pos-item">Inside Linebacker </li>
+            <li className="pos-item">Outside Linebacker</li>
+            <li className="pos-item">Corner Back</li>
+            <li className="pos-item">Free Safety</li>
+            <li className="pos-item">Strong Safety</li>
             </ul>
           </div>
 
