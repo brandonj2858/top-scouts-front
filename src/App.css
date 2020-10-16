@@ -226,6 +226,10 @@ tr:nth-child(even) {
 
 }
 
+.player-page:hover {
+  cursor: pointer;
+}
+
 .pos-item:hover {
   font-weight: 500;
   background-color: white;
@@ -452,6 +456,8 @@ background: #f9fafd;
   width: 75px;
   letter-spacing: 2px;
 }
+
+
 
 .pass-input {
   border: 1px;

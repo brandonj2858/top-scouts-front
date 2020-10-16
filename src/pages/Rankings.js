@@ -106,7 +106,7 @@ const Rankings = () => {
             return (
             <tr className="table-values">
               <td>{player.rank}</td>
-              <td>{player.first_name + " " + player.last_name}</td>
+              <td className="player-page">{player.first_name + " " + player.last_name}</td>
               <td>{player.school}</td>
               <td>{player.height}</td>
               <td>{player.weight}</td>

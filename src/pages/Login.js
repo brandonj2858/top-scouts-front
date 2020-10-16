@@ -7,7 +7,7 @@ import userActions from '../redux/actions';
 const Login = () => {
   const [loginValues, setLoginValues] = useState({})
 
-  const dispatch = useDispatch();
+  //const dispatch = useDispatch();
 
   const handleLogin = (evt) => {
 
@@ -24,7 +24,7 @@ const Login = () => {
       console.log(res.user)
       return res.data
     })
-    dispatch(userActions.loginUserToDB(loginValues));
+    //dispatch(userActions.loginUserToDB(loginValues));
     /*props.history.push('/');*/
 
 
