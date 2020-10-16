@@ -19,10 +19,13 @@ const Login = () => {
       },
       body: JSON.stringify(loginValues)
     })
-    .then(res => {
-      localStorage.setItem('usertoken', res)
-      console.log(res.user)
-      return res.data
+    .then(res => res.json())
+    .then(resObj => {
+      console.warn("result", resObj)
+      localStorage.setItem("login", JSON.stringify({
+        login: true,
+        token: resObj.token
+      }))
     })
     //dispatch(userActions.loginUserToDB(loginValues));
     /*props.history.push('/');*/
