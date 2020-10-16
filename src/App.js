@@ -26,6 +26,7 @@ function App() {
       </div>
       </header>
       <ul className="nav-bar">
+        <Link to="/"><li className="nav-item">Home</li></Link>
         <Link to="/login"><li className="nav-item">Login</li></Link>
         <Link to="/rankings"><li className="nav-item">Rankings</li></Link>
         <Link to="/find"><li className="nav-item">Search</li></Link>
