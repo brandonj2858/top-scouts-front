@@ -87,13 +87,13 @@ const Rankings = () => {
           <div className="offense-container">
             <header className="offense-header">Defense</header>
             <ul className="offense-list">
-            <li className="pos-item">Defensive Tackle</li>
-            <li className="pos-item">Defensive End </li>
-            <li className="pos-item">Inside Linebacker </li>
-            <li className="pos-item">Outside Linebacker</li>
-            <li className="pos-item">Corner Back</li>
-            <li className="pos-item">Free Safety</li>
-            <li className="pos-item">Strong Safety</li>
+            <li onClick={handlePosChange} name="DT" className="pos-item">Defensive Tackle</li>
+            <li onClick={handlePosChange} name="DE" className="pos-item">Defensive End </li>
+            <li onClick={handlePosChange} name="ILB" className="pos-item">Inside Linebacker </li>
+            <li onClick={handlePosChange} name="OLB" className="pos-item">Outside Linebacker</li>
+            <li onClick={handlePosChange} name="DB" className="pos-item">Corner Back</li>
+            <li onClick={handlePosChange} name="FS" className="pos-item">Free Safety</li>
+            <li onClick={handlePosChange} name="SS" className="pos-item">Strong Safety</li>
             </ul>
           </div>
 
