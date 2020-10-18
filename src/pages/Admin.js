@@ -7,7 +7,7 @@ const Find = (props) => {
 
   const showForm = (evt) => {
     setUpdateForm(true)
-    console.log(document.getElementsByClassName('player-div'));
+    
 
 
   }

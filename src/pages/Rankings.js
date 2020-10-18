@@ -92,8 +92,8 @@ const Rankings = () => {
             <li onClick={handlePosChange} name="ILB" className="pos-item">Inside Linebacker </li>
             <li onClick={handlePosChange} name="OLB" className="pos-item">Outside Linebacker</li>
             <li onClick={handlePosChange} name="DB" className="pos-item">Corner Back</li>
-            <li onClick={handlePosChange} name="FS" className="pos-item">Free Safety</li>
-            <li onClick={handlePosChange} name="SS" className="pos-item">Strong Safety</li>
+            <li onClick={handlePosChange} name="S" className="pos-item">Free Safety</li>
+            <li onClick={handlePosChange} name="S" className="pos-item">Strong Safety</li>
             </ul>
           </div>
 

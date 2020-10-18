@@ -96,7 +96,7 @@ const PlayerForm = () => {
 
     <Search filterTeam={filterTeam} handleSet={handleSet}/>
     <div className="results-container">
-
+      
       <div className="prof-div" >
 
         {selectedTeam.length === 0 ? null :
