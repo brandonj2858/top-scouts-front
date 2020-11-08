@@ -432,7 +432,7 @@ background: #f9fafd;
   border-radius: 10px;
   width: 400px;
   margin-left: 35%;
-  background: linear-gradient(90deg, rgb(114, 149, 202) 0%, rgb(123, 167, 239) 51%, rgb(82, 122, 183) 90%);
+  background: linear-gradient(90deg, rgb(114 149 202 / 52%) 0%, rgb(179 199 239) 51%, rgb(82 122 183 / 45%) 90%);
 }
 
 .username-input {
@@ -441,7 +441,7 @@ background: #f9fafd;
   border-radius: 5px;
   height: 25px;
   width: 50%;
-  background: #f1fbfb;
+
 }
 
 .article-div:hover {

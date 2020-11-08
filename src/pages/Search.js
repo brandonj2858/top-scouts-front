@@ -15,6 +15,8 @@ const Search = (props) => {
     .then(res => res.json())
     .then(resObj => setPlayers(resObj))
 
+    
+
 
   }, [])
 
@@ -32,7 +34,7 @@ const Search = (props) => {
 
     setSelection(selectedPlayer[0])
     setSuggestions([])
-    
+
 
   }
 

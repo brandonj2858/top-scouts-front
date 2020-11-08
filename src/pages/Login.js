@@ -1,43 +1,65 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useContext} from 'react';
 import {BrowserRouter as  Redirect ,Link} from 'react-router-dom';
 import App from '../App'
 import { useDispatch } from 'react-redux';
 import userActions from '../redux/actions';
+import UserContext from '../context/UserContext'
 
-const Login = () => {
+const Login = (props) => {
   const [loginValues, setLoginValues] = useState({})
+  const {userData, setUserData} = useContext(UserContext)
+
+
 
   //const dispatch = useDispatch();
 
-  const handleLogin = (evt) => {
+  const handleLogin = async(evt) => {
+    evt.preventDefault()
 
-    fetch(`http://localhost:3000/users/login`, {
+
+    await fetch(`http://localhost:3000/users/login`, {
       method: "POST",
       headers: {
-        "Content-Type" : "application/json",
-        "Accept" : "application/json"
+        "Content-Type" : "application/json"
       },
-      body: JSON.stringify(loginValues)
+      body: JSON.stringify({
+        username: loginValues.username,
+        password: loginValues.password
+      })
     })
     .then(res => res.json())
     .then(resObj => {
-      console.warn("result", resObj)
-      localStorage.setItem("login", JSON.stringify({
-        login: true,
+      setUserData({token: resObj.token, user: resObj.user.username})
+      localStorage.setItem("auth-token", JSON.stringify({
+        user: resObj.user.username,
         token: resObj.token
       }))
+      props.history.push('/');
     })
+    .catch((e) => {
+      var userPut = document.querySelector(".username-input")
+      userPut.style.backgroundColor = "red"
+      localStorage.setItem("auth-token", JSON.stringify({
+        user: "",
+        token: ""
+      }))
+
+      console.log(e)
+    })
+
     //dispatch(userActions.loginUserToDB(loginValues));
-    /*props.history.push('/');*/
+    //setUserData(localStorage["auth-token"].user)
 
 
+    //location.reload();
+    console.log(userData)
 
 
   }
 
   const handleChange = (evt) => {
     evt.preventDefault()
-    console.log(evt.target.value);
+
     let loginValuesCopy = {...loginValues}
     loginValuesCopy[evt.target.name] = evt.target.value
     setLoginValues(loginValuesCopy)
