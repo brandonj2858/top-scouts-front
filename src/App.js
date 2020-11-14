@@ -8,11 +8,11 @@ import Login from './pages/Login'
 import Home from './pages/Home'
 import UserContext from './context/UserContext'
 
-import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch, Link, Redirect} from 'react-router-dom';
 
 
 
-function App() {
+function App(props) {
   const [userData, setUserData] = useState({token: undefined, user: undefined})
   const [tokenRes, setTokenRes] = useState({})
 
@@ -47,6 +47,13 @@ function App() {
     checkLoggedIn()
   }, [])
 
+  const logOut = (evt) => {
+    localStorage.setItem("auth-token", "");
+    window.location.reload()
+    console.log("Logged Out")
+
+  }
+
   return (
     <Router>
     <UserContext.Provider value={{userData, setUserData}}>
@@ -62,7 +69,9 @@ function App() {
         <Link to="/"><li className="nav-item">Home</li></Link>
         <Link to="/rankings"><li className="nav-item">Rankings</li></Link>
         <Link to="/find"><li className="nav-item">Search</li></Link>
-        {userData.user ? <li className="nav-item">Logout</li> :<Link to="/login"> <li className="nav-item">Login</li> </Link> }
+        {userData.user ? <li className="nav-item" onClick={logOut}>Logout</li> :<Link to="/login"> <li className="nav-item">Login</li> </Link> }
+        {userData.user ? <li className="user-link">{userData.user} </li> : null}
+
 
       </ul>
       </div>

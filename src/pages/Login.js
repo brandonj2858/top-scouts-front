@@ -74,14 +74,21 @@ const Login = (props) => {
     <div className="login-area">
 
       <div className="form-area">
-        <h2>LOGIN </h2>
         <form onChange={handleChange} onSubmit={handleLogin}>
           <input placeholder="Username" className="username-input" type="text" name="username"/>
           <br/>
           <input  placeholder="Password" className="pass-input" type="password" name="password"/>
           <br/>
-          <input style={{marginTop: "5px"}} type="submit" className="login-submit" value="Submit"/>
+          <input style={{marginTop: "5px"}} type="submit" className="login-submit" value="Log In"/>
         </form>
+        <div>
+          <a className="resetLink">
+          Forgot Password
+          </a>
+          <div className="border-div">
+          </div>
+          <button className="create-button">Create Account</button>
+        </div>
       </div>
 
     </div>

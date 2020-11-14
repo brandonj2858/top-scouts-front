@@ -8,6 +8,10 @@
   pointer-events: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -93,6 +97,16 @@
   color: whitesmoke;
 }
 
+.user-link {
+  cursor: pointer;
+  padding-left: 50px;
+  color: white;
+  display: inline-block;
+  list-style-type: none;
+  color: whitesmoke;
+  margin-left: 50px;
+}
+
 .main-container {
   background: #edeef0;
   padding-top: 75px;
@@ -141,7 +155,7 @@
 .right-column {
   width: 25%;
   float: left;
-  background: #edeef0;
+
 }
 
 .offense-container {
@@ -228,6 +242,10 @@ tr:nth-child(even) {
 
 .player-page:hover {
   cursor: pointer;
+}
+
+.player-rank {
+  font-weight: 700;
 }
 
 .pos-item:hover {
@@ -372,8 +390,9 @@ tr:nth-child(even) {
   text-align: start;
   width: 100%;
   height: -webkit-fill-available;
-  background: white;
+  background: #ffffff96;
   border-radius: 10px;
+
 }
 
 .prof-li {
@@ -426,21 +445,40 @@ background: #f9fafd;
 }
 
 .form-area {
+  align-items: center;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+  box-sizing: border-box;
+  padding: 20px 0 28px;
   margin-top: 50px;
-  height: 250px;
-  border: 1px solid;
+  height: 300px;
   border-radius: 10px;
-  width: 400px;
+  background: #ffffffe0;
   margin-left: 35%;
-  background: linear-gradient(90deg, rgb(114 149 202 / 52%) 0%, rgb(179 199 239) 51%, rgb(82 122 183 / 45%) 90%);
+  width: 396px;
+}
+
+.create-button {
+  border: none;
+  border-radius: 6px;
+  font-size: 17px;
+  line-height: 48px;
+  padding: 0 16px;
+  color: white;
+  background: #78b15b;
 }
 
 .username-input {
+  margin-top: 10px;
   margin-bottom: 5px;
   border: 1px;
   border-radius: 5px;
-  height: 25px;
-  width: 50%;
+  height: 35px;
+  width: 60%;
+  font-size: 20px;
+  font-family: sans-serif;
+  border: 1px solid #ccd0d5;
 
 }
 
@@ -450,21 +488,48 @@ background: #f9fafd;
 
 .login-submit {
   font-family: sans-serif;
-  margin-top: 5px;
+  margin-top: 7px;
+  margin-bottom: 7px;
   height: 25px;
   border-radius: 5px;
   width: 75px;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
+  background: #3f83ff;
+  border: 1px solid transparent;
+  width: 210px;
+  height: 35px;
+  font-family: sans-serif;
+  font-size: 15px;
+  color: white;
+
 }
 
+.resetLink {
+  font-size: 12px;
+  color: #1877f2;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.border-div {
+  border-bottom: 1px dotted;
+  border-color: #02128659;
+  margin: 20px;
+}
 
 
 .pass-input {
   border: 1px;
   border-radius: 5px;
-  height: 25px;
-  width: 50%;
-  background: #f1fbfb;
+  height: 35px;
+  width: 60%;
+  font-size: 20px;
+  font-family: sans-serif;
+  margin-top: 6px;
+  border: 1px solid #ccd0d5;
+  margin-bottom: 7px;
+
 }
 
 @keyframes App-logo-spin {
