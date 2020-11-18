@@ -7,7 +7,7 @@ const Find = (props) => {
 
   const showForm = (evt) => {
     setUpdateForm(true)
-    
+
 
 
   }
@@ -16,7 +16,7 @@ const Find = (props) => {
     <div>
 
       <div style={{textAlign: "center"}}>
-        <marquee className="admin-heading"><h1 style={{marginTop: '10px', color: "black"}}>Search Players</h1></marquee>
+        <h1 className="search-heading">Search Players</h1>
       </div>
 
       <div className="admin-left">

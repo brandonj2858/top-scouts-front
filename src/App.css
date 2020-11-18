@@ -88,6 +88,11 @@ a {
   padding: 0px;
 }
 
+.search-heading {
+  font-family: serif;
+  letter-spacing: 1px;
+}
+
 .nav-item {
   cursor: pointer;
   padding-left: 50px;
@@ -312,22 +317,21 @@ tr:nth-child(even) {
 }
 
 .suggestions-area {
-  margin-top: 28px;
+  margin-top: 59px;
   text-align: center;
   list-style: none;
-  width: 209px;
+  width: 197px;
   background-color: white;
   border: 1px solid #d4d4d4;
   border-bottom: none;
   border-top: none;
-  margin-left: 324px;
+  margin-left: 312px;
   top: 100%;
   left: 0;
   right: 0;
   position: absolute;
   top: 105px;
   left: 320px;
-
 }
 
 .suggestion-list {
@@ -417,10 +421,22 @@ tr:nth-child(even) {
 
 .search-bar {
   font-size: 17px;
-border: 1px solid grey;
-float: left;
-width: 80%;
-background: #f9fafd;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f9fafd;
+  border-radius: 5px;
+  height: 25px;
+  font-size: 20px;
+}
+
+.report-head {
+  padding-right: 5px;
+  text-decoration: underline;
+}
+
+.report-area {
+  margin-top: 5px;
 }
 
 

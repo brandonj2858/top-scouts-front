@@ -96,7 +96,7 @@ const PlayerForm = () => {
 
     <Search filterTeam={filterTeam} handleSet={handleSet}/>
     <div className="results-container">
-      
+
       <div className="prof-div" >
 
         {selectedTeam.length === 0 ? null :
@@ -108,21 +108,20 @@ const PlayerForm = () => {
               <li className="prof-li"><span className="attributes"> Height </span> <strong className="attributes-value" style={{color: teamColors}} >{selection.height}</strong></li>
               <li className="prof-li"><span className="attributes"> weight </span> <strong className="attributes-value" style={{color: teamColors}} >{selection.weight}</strong></li>
               <li className="prof-li"><span className="attributes"> School </span> <strong className="attributes-value" style={{color: teamColors}} >{selection.school}</strong></li>
+              <li className="prof-li"><span className="attributes">Rank</span> <strong className="attributes-value" style={{color: teamColors}}>{selection.rank}</strong></li>
 
 
 
 
             </div>
+            <div>
+            </div>
 
-            <form onChange={handleChange} onSubmit={handleUpdate} className="update-form">
-            Rank: <select type="number" value={formValues["rank"]}  name="rank"  >
-              {intRange().map((num) => {return <option   >{num}</option>})}
-            </select>
-            <textarea className="scout-input" type="textarea" value={formValues["scouting_report"]}  name="scouting_report"/>
+            <div className="report-area">
+            <strong className="report-head">Report</strong>
+            {selection.scouting_report.length === 0 ? "Coming Soon!" : selection.scouting_report}
+            </div>
 
-            <input type="submit" value="Submit"/>
-
-            </form>
 
 
 
