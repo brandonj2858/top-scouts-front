@@ -6,7 +6,8 @@ const Rankings = () => {
 
   const [players, setPlayers] = useState([])
   const [suggestions, setSuggestions] = useState([])
-  const [position, setPosition] = useState("RB")
+  const [position, setPosition] = useState()
+  const [selPlay, setSelPlay] = useState({})
 
   useEffect(() => {
     fetch('http://localhost:3000/players')
@@ -62,6 +63,18 @@ const Rankings = () => {
     setPosition(evt.target.getAttribute('name'))
   }
 
+  const handlePlay = (evt) => {
+    let evtId = evt.target.id
+
+    const theChosen = players.filter((player) => player.id === evtId)
+    setSelPlay(theChosen[0])
+
+    console.log( selPlay)
+
+  }
+
+
+
 
 
     return (
@@ -116,7 +129,7 @@ const Rankings = () => {
             return (
             <tr className="table-values">
               <td className="player-rank">{player.rank}</td>
-              <td className="player-page">{player.first_name + " " + player.last_name}</td>
+              <td onClick={handlePlay} id={player._id} className="player-page">{player.first_name + " " + player.last_name}</td>
               <td>{player.school}</td>
               <td>{player.height}</td>
               <td>{player.weight}</td>
@@ -125,12 +138,22 @@ const Rankings = () => {
 
             }): null}
 
-
-
-
-
             </table>
 
+            {selPlay.first_name?  (<div className="rankProf" style={{display: "flex", flexFlow: "wrap"}}>
+              <li className="prof-li"><span className="attributes">Name</span> <strong className="attributes-value" >{selPlay.first_name} {selPlay.last_name} </strong></li>
+              <li className="prof-li"><span className="attributes"> Position </span> <strong className="attributes-value"  >{selPlay.position}</strong></li>
+              <li className="prof-li"><span className="attributes"> Height </span> <strong className="attributes-value"  >{selPlay.height}</strong></li>
+              <li className="prof-li"><span className="attributes"> weight </span> <strong className="attributes-value"  >{selPlay.weight}</strong></li>
+              <li className="prof-li"><span className="attributes"> School </span> <strong className="attributes-value"  >{selPlay.school}</strong></li>
+              <li className="prof-li"><span className="attributes">Rank</span> <strong className="attributes-value" >{selPlay.rank}</strong></li>
+
+
+
+
+            </div>) :
+              <div>{selPlay.first_name, console.log(selPlay)}</div>
+            }
 
 
           </div>

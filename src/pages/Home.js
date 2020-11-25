@@ -19,6 +19,10 @@ const Home = () => {
     }, []
     )
 
+    const handleArt = (evt) => {
+      console.log(news)
+    }
+
   return(
     <div>
 
@@ -27,39 +31,19 @@ const Home = () => {
           <div className="left-column">
 
           <div className="offense-container">
-            <header className="offense-header">Offense</header>
+            <header className="offense-header">Upcoming</header>
             <ul className="offense-list">
 
-            <li className="pos-item">Quarterback </li>
+            <li className="pos-item">CFP Playoffs 1/1</li>
+            <li className="pos-item">CFP Ntl Championship 1/11</li>
+            <li className="pos-item">NFL Wild-Card 1/9</li>
+            <li className="pos-item">Super Bowl 2/7</li>
+            <li className="pos-item">NFL Draft 4/29</li>
 
-            <li className="pos-item">Runningback </li>
-            <li className="pos-item">FullBack </li>
-            <li className="pos-item">Offensive Tackle</li>
-            <li className="pos-item">Offensive Gaurd </li>
-            <li className="pos-item">Tight End</li>
-            <li className="pos-item">Wide Reciever </li>
 
             </ul>
           </div>
 
-          <div className="offense-container">
-            <header className="offense-header">Defense</header>
-            <ul className="offense-list">
-
-
-            <li className="pos-item">Defensive Tackle</li>
-            <li className="pos-item">Defensive End </li>
-            <li className="pos-item">Inside Linebacker </li>
-            <li className="pos-item">Outside Linebacker</li>
-            <li className="pos-item">Corner Back</li>
-            <li className="pos-item">Free Safety</li>
-            <li className="pos-item">Strong Safety</li>
-
-
-
-
-            </ul>
-          </div>
 
           </div>
 
@@ -67,12 +51,14 @@ const Home = () => {
           {news ? news.map((article) => {
 
             return(
-            <div className="article-div">
+            <div target="_blank" onClick={handleArt} className="article-div">
+            <a href={article.url}>
             <img className="articleImg" src={article.urlToImage}/>
+            </a>
             <h2 className="article-head" >{article.title}</h2>
             <a className="article-desc">{article.description} </a>
-
-             </div>)
+            </div>
+             )
           }) : null}
 
 

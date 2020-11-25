@@ -18,6 +18,11 @@ a {
   }
 }
 
+.rankProf {
+  margin-top: 50px;
+}
+
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -109,7 +114,7 @@ a {
   display: inline-block;
   list-style-type: none;
   color: whitesmoke;
-  margin-left: 50px;
+  margin-left: 35%;
 }
 
 .main-container {
